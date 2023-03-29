@@ -1,0 +1,20 @@
+Header - Title
+
+search bar for input of city
+
+cards for 5 day forecast
+
+First Card - 
+Current Day contains:
+weather conditions
+city name
+the date
+icon representation of weather conditions
+temperature
+humidity
+wind speed
+
+Next 4 cards - 
+weather forecast for the next 4 days after the current day
+
+search history saved to local storage - and saved into some form of dropdown under the searchbar
