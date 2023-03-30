@@ -15,6 +15,12 @@ humidity
 wind speed
 
 Next 5 cards - 
-weather forecast for the next 4 days after the current day
+weather forecast for the next 5 days after the current day
+date
+icon
+temperature
+humidity
+wind speed
+
 
 search history saved to local storage - and saved into some form of dropdown under the searchbar

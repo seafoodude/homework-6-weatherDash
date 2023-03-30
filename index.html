@@ -1,31 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./Assets/style.css"/>
+    <link rel="stylesheet" href="./Assets/style.css" />
     <title>Document</title>
 
 </head>
-    <header>
-        <h1 class="title">FORM OF TITLE</div>
-    </header>
+
+<header>
+    <h1>Weather Dashboard</div>
+</header>
 
 <body>
     <div class="searchbar" id="brownBox">
         <div class="searchtext">
             <h2>Search for a city!</h2>
-            <input class=""></input>
+            <form>
+                <input class="input" type="text" placeholder="Search a city..." />
+                <button class="btn" id="search" type="submit">Search</button>
+                <button class="btn" id="clear" type="submit">Clear</button>
+            </form>
         </div>
     </div>
 
-    <div class="firstcard">
+    <div class="float-center row">
+        <div class="firstCard">
+            <h3>Today</h3>
+            <p class="today weatherConditions">weather conditions</p>
+            <p class="today cityName">city name</p>
+            <p class="today date">date</p>
+            <p class="today icon">icon representation of weather conditions</p>
+            <p class="today temperature">temperature</p>
+            <p class="today humidity">humidity</p>
+            <p class="today windSpeed">wind speed</p>
+        </div>
 
-    </div>
+        <div class="fiveDayForecast">
+            <div class="oneDay">
+                <div class="day1">
+                    <h4>Day 1</h4>
+                    <p class="foreDay date">date</p>
+                    <p class="foreDay icon">icon representation of weather conditions</p>
+                    <p class="foreDay temperature">temperature</p>
+                    <p class="foreDay humidity">humidity</p>
+                    <p class="foreDay windSpeed">wind speed</p>
+                </div>
+            </div>
 
-    <div class="fiveDayForecast">
+            <div class="oneDay">
+                <div class="day2">
+                    <h4>Day 2</h4>
+                    <p class="foreDay date">date</p>
+                    <p class="foreDay icon">icon representation of weather conditions</p>
+                    <p class="foreDay temperature">temperature</p>
+                    <p class="foreDay humidity">humidity</p>
+                    <p class="foreDay windSpeed">wind speed</p>
+                </div>
+            </div>
 
+            <div class="oneDay">
+                <div class="day3">
+                    <h4>Day 3</h4>
+                    <p class="foreDay date">date</p>
+                    <p class="foreDay icon">icon representation of weather conditions</p>
+                    <p class="foreDay temperature">temperature</p>
+                    <p class="foreDay humidity">humidity</p>
+                    <p class="foreDay windSpeed">wind speed</p>
+                </div>
+            </div>
+
+            <div class="oneDay">
+                <div class="day4">
+                    <h4>Day 4</h4>
+                    <p class="foreDay date">date</p>
+                    <p class="foreDay icon">icon representation of weather conditions</p>
+                    <p class="foreDay temperature">temperature</p>
+                    <p class="foreDay humidity">humidity</p>
+                    <p class="foreDay windSpeed">wind speed</p>
+                </div>
+            </div>
+
+            <div class="oneDay">
+                <div class="day5">
+                    <h4>Day 5</h4>
+                    <p class="foreDay date">date</p>
+                    <p class="foreDay icon">icon representation of weather conditions</p>
+                    <p class="foreDay temperature">temperature</p>
+                    <p class="foreDay humidity">humidity</p>
+                    <p class="foreDay windSpeed">wind speed</p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="./Assets/script.js"></script>

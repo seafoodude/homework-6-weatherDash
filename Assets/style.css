@@ -13,15 +13,17 @@
 }
 
 header {
+    z-index: 3;
     display: block;
     position: fixed;
+    top: 0;
     height: 15vh;
     width: 100%;
     text-align: center;
     background-color: var(--drkst);
 }
 
-.title {
+h1 {
     margin-top: 5vh;
     font-size: 5rem;
     color: var(--wht);
@@ -33,9 +35,12 @@ body {
     width: 100%;
 }
 
+/* The brown box that contains the input */
+
 .searchbar {
+    z-index: 1;
     display: flex;
-    position: fixed;
+    position: absolute;
     align-items: center;
     right: 25vw;
     top: 20vh;
@@ -53,12 +58,98 @@ body {
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 3rem;
     padding-bottom: 2rem;
+    color: var(--drkst);
+}
+
+h3,
+h4,
+p {
+    color: var(--drkst);
 }
 
 input {
     height: 2.5rem;
     width: 25vw;
     font-size: 2rem;
+}
+
+button {
+    height: 2rem;
+    width: 5rem;
+}
+
+::placeholder {
+    color: var(--drkst);
+}
+
+.btn {
+    font-size: 1rem;
+    background-color: var(--drk);
+    color: var(--wht);
+}
+
+.btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0.04rem 1.4rem 0 var(--wht);
+    transition: transform 150ms;
+}
+
+.float-center {
+    margin-left: 15vw;
+}
+
+/* Starts the weather part of the dashboard */
+
+.row {
+    display: flex;
+    margin-top: 50vh;
+    height: 45vh;
+    width: 65vw;
+}
+
+.firstCard {
+    height: 40rem;
+    width: 25rem;
+    border: 0.3rem solid var(--drk);
+    border-radius: 3rem;
+    padding-left: 2rem;
+}
+
+h3 {
+
+    font-size: 4rem;
+}
+
+.today {
+    font-size: 1.5rem;
+    padding-top: 2rem;
+}
+
+.fiveDayForecast {
+    display: flex;
+    justify-content: center;
+    padding-left: 1rem;
+    height: 41rem;
+    width: 100rem;
+}
+
+.oneDay {
+    margin-top: 5rem;
+    height: 35rem;
+    width: 35rem;
+    padding-left: 2rem;
+    margin-left: 2rem;
+    border: 0.3rem solid var(--drk);
+    border-radius: 3rem;
+}
+
+h4 {
+    font-size: 2rem;
+}
+
+.foreDay {
+    font-size: 1rem;
+    padding-top: 2rem;
 }
