@@ -64,11 +64,16 @@ function getWeatherData(city) {
 
                 }
             }
+            displayForecastData(forecastData);
         })
+        .catch(function (error) {
+            // Display error message if API call fails
+            alert("Error: " + error);
+        });
 }
 
 function displayForecastData(forecastData) {
-    for (var i=0; i<forecastData.length; i++) {
+    for (var i = 0; i < forecastData.length; i++) {
         var forecastCard = document.querySelector(".day" + i);
         forecastCard.querySelector(".date").textContent = forecastData[i].date;
         forecastCard.querySelector(".icon").setAttribute("src", forecastData[i].icon);
@@ -77,3 +82,44 @@ function displayForecastData(forecastData) {
         forecastCard.querySelector(".windSpeed").textContent = "Wind Speed: " + forecastData[i].wind + " MPH";
     }
 }
+
+function updateSearchHistory() {
+    // Clear existing search history
+    document.querySelector("#search-history").innerHTML = "";
+
+    // Loop through search history and create list items
+    for (var i = 0; i < searchHistory.length; i++) {
+        var liEl = document.createElement("li");
+        liEl.textContent = searchHistory[i];
+        document.querySelector("#search-history").appendChild(liEl);
+    }
+}
+
+function displayCurrentWeather(currentWeather) {
+    // Update HTML with current weather data
+    document.querySelector(".today-cityName").textContent = currentWeather.city + " (" + currentWeather.date + ")";
+    document.querySelector(".today-icon").setAttribute("src", currentWeather.icon);
+    document.querySelector(".today-temperature").textContent = "Temperature: " + currentWeather.temp + " °F";
+    document.querySelector(".today-humidity").textContent = "Humidity: " + currentWeather.humidity + "%";
+    document.querySelector("today-windSpeed").textContent = "Wind Speed: " + currentWeather.wind + "%";
+
+    // Initialize search history
+    updateSearchHistory();
+}
+
+var forecastData = [];
+for (var i = 0; i < data.list.length; i++) {
+    if (data.list[i].dt_txt.endsWith("12:00:00")) {
+        var forecast = {
+            date: moment(data.list[i].dt_txt).format("M/D/YYYY"),
+            icon: "https://openweathermap.org/img/w/" + data.list[i].weather[0].icon + ".png",
+            temp: data.list[i].main.temp,
+            humidity: data.list[i].main.humidity,
+            wind: data.list[i].wind.speed
+        };
+        forecastData.push(forecast);
+    }
+}
+
+// Display 5-day forecast data
+displayForecastData(forecastData); 
