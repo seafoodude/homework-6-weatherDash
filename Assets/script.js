@@ -8,6 +8,7 @@ var searchHistory = JSON.parse(localStorage.getItem("searchHistory")) || [];
 
 
 button.addEventListener("click", function () {
+    event.preventDefault();
     var city = input.value.trim();
     if (city) {
         getWeatherData(city);
@@ -123,3 +124,4 @@ for (var i = 0; i < data.list.length; i++) {
 
 // Display 5-day forecast data
 displayForecastData(forecastData); 
+
