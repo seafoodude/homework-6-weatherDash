@@ -24,7 +24,7 @@ N/A
 
 ## Usage
 
-To use this Homework 6 Weather Dashboard, you can search for a city of choice, and the page will populate with the weather information for the current day and the next 5 days. The current day will display the weather conditions, city name, date, icon, temperature, humidity, and wind speed. The 5 day forecast will display the date, icon, temperature, humidity, and wind speed. The searched city will be saved into localstorage and displayed in a 'previous search' box.
+To use this Homework 6 Weather Dashboard, you can search for a city of choice, and the page will populate with the weather information for the current day and the next 5 days. The current day will display the weather conditions, city name, date, icon, temperature, humidity, and wind speed. The 5 day forecast will display the date, icon, temperature, humidity, and wind speed. The searched city will be saved into localstorage and displayed in a 'search history' box.
 
 **SCREENSHOTS**
 ![Screenshot of Initial Screen](./Assets/initialpage.PNG)
