@@ -5,113 +5,77 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
     <link rel="stylesheet" href="./Assets/style.css" />
     <title>Document</title>
 
 </head>
 
-<header>
-    <h1>Weather Dashboard</div>
-</header>
-
 <body>
-    <div class="searchbar" id="brownBox">
-        <div class="searchtext">
-            <h2>Search for a city!</h2>
+
+    <header>
+        <h1>Weather Dashboard</div>
+    </header>
+
+    <main>
+        <section>
             <form>
-                <input class="input" type="text" placeholder="Search a city..." />
-                <button class="btn" id="search" type="submit">Search</button>
-                <button class="btn" id="clear" type="submit">Clear</button>
+                <label for="city-input">Enter a city name:</label>
+                <input type="text" id="city-input" />
+                <button type="button" id="search-button">Search</button>
             </form>
-        </div>
-    </div>
+        </section>
 
-    <div class="float-center row">
-        <div class="firstCard">
-            <h3>Today</h3>
-            <ul>
-                <li class="today today-weatherConditions">weather conditions</li>
-                <li class="today today-cityName">city name</li>
-                <li class="today today-date">date</li>
-                <li class="today today-icon">icon representation of weather conditions</li>
-                <li class="today today-temperature">temperature</li>
-                <li class="today today-humidity">humidity</li>
-                <li class="today today-windSpeed">wind speed</li>
-            </ul>
+        <h2 id="city-name"></h2>
+        <div id="current-weather">
+            <img id="weather-icon" alt="Weather Icon" />
+            <p id="temperature"></p>
+            <p id="humidity"></p>
+            <p id="wind-speed"></p>
         </div>
 
-        <div class="fiveDayForecast">
-            <div class="oneDay">
-                <div class="day0">
-                    <h4>Day 1</h4>
-                    <ul>
-                        <li class="foreDay date" id="date">date</li>
-                        <li class="foreDay icon" id="icon">icon representation of weather conditions</li>
-                        <li class="foreDay temperature" id="temperature">temperature</li>
-                        <li class="foreDay humidity" id="humidity">humidity</li>
-                        <li class="foreDay windSpeed"id="windSpeed">wind speed</li>
-                    </ul>
+        <section>
+            <h2>5-Day Forecast:</h2>
+            <div id="forecast-container">
+                <div class="forecast-card" id="forecast-card-0">
+                    <p class="card-date"></p>
+                    <img class="card-icon" alt="Weather Icon" />
+                    <p class="card-temp"></p>
+                    <p class="card-humidity"></p>
+                    <p class="card-wind-speed"></p>
+                </div>
+                <div class="forecast-card" id="forecast-card-1">
+                    <p class="card-date"></p>
+                    <img class="card-icon" alt="Weather Icon" />
+                    <p class="card-temp"></p>
+                    <p class="card-humidity"></p>
+                    <p class="card-wind-speed"></p>
+                </div>
+                <div class="forecast-card" id="forecast-card-2">
+                    <p class="card-date"></p>
+                    <img class="card-icon" alt="Weather Icon" />
+                    <p class="card-temp"></p>
+                    <p class="card-humidity"></p>
+                    <p class="card-wind-speed"></p>
+                </div>
+                <div class="forecast-card" id="forecast-card-3">
+                    <p class="card-date"></p>
+                    <img class="card-icon" alt="Weather Icon" />
+                    <p class="card-temp"></p>
+                    <p class="card-humidity"></p>
+                    <p class="card-wind-speed"></p>
+                </div>
+                <div class="forecast-card" id="forecast-card-4">
+                    <p class="card-date"></p>
+                    <img class="card-icon" alt="Weather Icon" />
+                    <p class="card-temp"></p>
+                    <p class="card-humidity"></p>
+                    <p class="card-wind-speed"></p>
                 </div>
             </div>
+        </section>
+    </main>
 
-            <div class="oneDay">
-                <div class="day1">
-                    <h4>Day 2</h4>
-                    <ul>
-                        <li class="foreDay date" id="date">date</li>
-                        <li class="foreDay icon" id="icon">icon representation of weather conditions</li>
-                        <li class="foreDay temperature" id="temperature">temperature</li>
-                        <li class="foreDay humidity" id="humidity">humidity</li>
-                        <li class="foreDay windSpeed" id="windSpeed">wind speed</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="oneDay">
-                <div class="day2">
-                    <h4>Day 3</h4>
-                    <ul>
-                        <li class="foreDay date" id="date">date</li>
-                        <li class="foreDay icon" id="icon">icon representation of weather conditions</li>
-                        <li class="foreDay temperature" id="temperature">temperature</li>
-                        <li class="foreDay humidity" id="humidity">humidity</li>
-                        <li class="foreDay windSpeed" id="windSpeed">wind speed</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="oneDay">
-                <div class="day3">
-                    <h4>Day 4</h4>
-                    <ul>
-                        <li class="foreDay date" id="date">date</p>
-                        <li class="foreDay icon" id="icon">icon representation of weather conditions</li>
-                        <li class="foreDay temperature" id="temperature">temperature</li>
-                        <li class="foreDay humidity" id="humidity">humidity</li>
-                        <li class="foreDay windSpeed" id="windSpeed">wind speed</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="oneDay">
-                <div class="day4">
-                    <h4>Day 5</h4>
-                    <ul>
-                        <li class="foreDay date" id="date">date</li>
-                        <li class="foreDay icon" id="icon">icon representation of weather conditions</li>
-                        <li class="foreDay temperature" id="temperature">temperature</li>
-                        <li class="foreDay humidity" id="humidity">humidity</li>
-                        <li class="foreDay windSpeed" id="windSpeed">wind speed</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <aside>
-        <h5>Search History</h5>
-        <ul id="search-history"></ul>
-    </aside>
-    <footer></footer>
 
     <script src="./Assets/script.js"></script>
 
